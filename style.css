@@ -13,6 +13,10 @@ body{
     
 }
 
+header {
+    color: #fff;
+}
+
 .wrapper{
     margin: 120px auto;
     max-width: 400px;
@@ -23,6 +27,18 @@ body{
     padding: 30px;
     background-color: rgb(42, 47, 93);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* New styles for completed tasks */
+.completed {
+    text-decoration: line-through;
+    background-color: rgb(19, 23, 61) !important; /* Darker green background */
+    color: rgba(255, 255, 255, 0.7) !important; /* Slightly faded text color */
+}
+
+.remove {
+    color: yellow;
+    font-size: larger;
 }
 
 .wrapper header{
@@ -73,42 +89,32 @@ body{
     overflow-y: auto;
 }
 
-.todolist li{
+.todolist li {
     list-style: none;
-    height: auto; /* for longer text */ 
+    height: auto; /* for longer text */
     line-height: 2.1;
     position: relative;
-    /*background: rgb(133, 133, 255); /*optionally */
-    background-color: rgb(25, 29, 66);
+    background-color: rgb(12, 14, 33);
     border-radius: 5px;
     margin-bottom: 8px;
     padding: 0 15px;
     cursor: default;
     overflow: hidden;
     word-wrap: break-word;
-    color: rgb(198, 195, 195);
+    color: rgb(251, 251, 251);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.todolist li 
-
-/* .todolist li span{
-    position: absolute;
-    right: -50px;
-    color: #fff;
-    width: 50px;
-    text-align: center;
-    background: rgb(11, 14, 41);
-    border-radius: 0 3px 3px 0;
-    transition: all 0.4s ease;
+.todolist li .remove {
+    color: rgb(255, 255, 255);
     cursor: pointer;
-} */
-.remove {
-    color: yellow;
-    font-size: larger;
+    font-size: 18px;
 }
 
-.todolist li:hover span{
-    right: 0px;
+.todolist li .remove:hover {
+    color: rgb(212, 212, 212);
 }
 
 .wrapper .footer{
